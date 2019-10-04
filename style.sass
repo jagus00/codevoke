@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap&subset=latin-ext');
+
+$bg: #f9f9f9
+$grey: #383838
+$orange: #ff9600
+
+html
+    scroll-behavior: smooth
+
+
+body
+    background: $bg
+    margin: 0
+    padding: 0
+    font-family: 'Muli', sans-serif;
+    
+header
+    img
+        width: 100vw  
+        user-select: none
+nav
+    background: $bg
+    border-bottom: 1px solid #dedede
+    display: flex
+    padding-top: 20px
+    padding-bottom: 20px
+    position: sticky
+    top: 0
+    z-index: 1
+    img
+        height: 25px
+        margin-left: 10%
+    ul
+        margin: auto
+        list-style-type: none
+        text-transform: uppercase
+        text-align: center
+    li  
+        margin: 0 10px
+        display: inline-block
+    a
+        color: $grey
+        font-size: 16px
+        font-weight: 600
+        text-decoration: none
+        transition: .3s
+        &:nth-child(2)
+            color: $bg
+            background: $grey
+            border-radius: 5px
+            padding-top: 5px
+            padding-bottom: 5px
+            &:hover
+                background: $orange
+                color: $bg
+        &:hover
+            color: $orange
+section
+    margin: 0
+    padding-top: 50px
+    padding-bottom: 50px
+    text-align: center
+    h1
+        text-transform: uppercase
+        display: inline-block
+        text-align: center
+        font-size: 30px
+        font-weight: 500
+    h2
+        font-size: 14px
+        text-transform: uppercase
+        font-weight: 400
+    p
+        font-size: 16px
+        font-weight: 400
+    .description
+        margin: -20px auto 50px auto
+        color: #aaa
+    img
+        height: 15px
+    #squareR
+        transform: rotate(180deg)
+
+.white
+    color: $grey
+    .start
+        display: flex
+        justify-content: space-around
+        align-items: center
+        .box
+            width: 400px
+            &:nth-child(2)
+                input  
+                    border: 1px solid $orange
+                    color: $bg
+                    background: $orange
+                    &:hover
+                        border: 1px solid #dedede
+                        background: $bg
+                        color: $grey
+            img
+                height: 90px
+                margin: auto
+                display: block
+            p
+                display: block
+                margin: auto
+                width: 400px
+            input
+                margin-top: 20px
+                border: 1px solid #dedede
+                border-radius: 5px
+                padding: 8px 15px
+                background: $bg
+                cursor: pointer
+                text-transform: uppercase
+                transition: .3s
+                &:hover
+                    border: 1px solid $orange
+                    background: $orange
+                    color: $bg
+    .features1
+        display: flex
+        justify-content: space-around
+        align-items: center
+        text-align: left
+        .box
+            img
+                display: block
+                height: 55px
+            .info
+                display: block
+                margin-left: 15px
+                p
+                    margin-top: -20px
+                    width: 200px
+                
+            
+    .projects
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .box
+            text-align: center
+            background: url("1.jpg")
+            background-size: contain
+            background-repeat: no-repeat
+            opacity: .8
+            width: 20%
+            height: 200px 
+            border: .5px solid white
+            color: $bg
+            transition: .3s
+            &:hover
+                opacity: 1.5
+                color: $grey
+            p
+                display: block
+                margin: auto
+    .team
+        display: flex
+        justify-content: space-around
+        align-items: center
+        .person
+            img
+                height: 200px
+                display: block
+                border-top-right-radius: 5px
+                border-top-left-radius: 5px
+            .container 
+                border: 1px solid #B3B4B4
+                padding-top: 15px
+                padding-bottom: 35px
+                border-bottom-right-radius: 5px
+                border-bottom-left-radius: 5px
+                .profession
+                    color: #B3B4B4
+                    .info
+                        text-decoration: none
+                        color: #B3B4B4
+                        margin: auto 11px
+                    
+                    
+            .name
+                margin-top: -11px
+                span
+                    text-transform: uppercase
+                    color: $bg
+                    background: $grey
+                    padding: 8px 10px
+                    border-radius: 5px
+                
+            hr
+                width: 40%
+                border: 0;
+                height: 0;
+                border-top: 1px solid #b3b4b4
+            .info
+                a
+                    text-decoration: none
+                    color: #B3B4B4
+        .v
+            img
+                height: 125px
+    .offer
+        display: flex
+        justify-content: space-around
+        .box
+            display: block
+            &:nth-child(odd)
+                span
+                    background: $orange
+                input
+                    background: $grey
+                    border: 1px solid $grey
+                    
+            span 
+                color: $bg
+                background: $grey
+                padding: 8px 13px
+                border-radius: 5px
+                text-transform: uppercase
+                font-weight: 600
+            input
+                border: 1px solid $orange
+                border-radius: 5px
+                padding: 8px 15px
+                background: $orange
+                color: $bg
+                cursor: pointer
+                text-transform: uppercase
+                transition: .3s
+                &:hover
+                    border: 1px solid #dedede
+                    background: $bg
+                    color: $grey
+                
+        .line
+            border-bottom: 2px solid black
+            margin-top: 35px
+.grey
+    background: $grey
+    color: $bg
+    #break0
+        img
+            display: block
+            margin: auto
+            height: 35px
+            margin-top: -67px
+    #orangeText
+        color: $orange
+    #squareR img
+        display: block !important
+        margin-top: -50px
+    .features0
+        display: flex
+        align-items: center
+        justify-content: space-around
+        .featuresLeft
+            width: 30%
+            .featuresContent
+                display: flex
+                align-items: center
+                text-align: left
+                img
+                    height: 40px
+                .featuresText
+                    display: inline-block
+                    margin-left: 40px
+                    line-height: 1
+                    h4
+                        text-transform: uppercase
+                    p
+                        color: #b4b4b4
+        .featuresRight
+            img
+                height: 275px;
+    .achivements
+        display: flex
+        justify-content: space-around
+        .box
+            display: block
+            .line
+                margin-top: 10px
+                border-bottom: 2px solid black
+            span
+                font-size: 25px
+            p
+                text-transform: uppercase
+            
+.orange
+    background: $orange
+    color: $bg
+    #break1
+        background: black
+        color: black
+    .wtf
+        display: block
+        margin: auto
+        background: $bg
+        color: $grey
+        width: 150px
+        padding: 8px 15px
+        text-align: center
+        text-transform: uppercase
+        font-weight: 600
+        border-radius: 5px
+    .opinion
+        display: block
+        margin: 25px auto 0 auto
+        width: 60%
+
+footer
+    background: $grey
+    color: $bg
+    text-align: center
+    padding-bottom: 15px
+    #break2
+        img
+            height: 25px
+            margin-top: -50px
