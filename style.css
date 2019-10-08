@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap&subset=latin-ext");
+@-webkit-keyframes opinionSlide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes opinionSlide {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 html {
   scroll-behavior: smooth; }
 
@@ -17,7 +28,7 @@ header img {
 
 nav {
   background: #f9f9f9;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +89,7 @@ section {
     font-weight: 400; }
   section .description {
     margin: -20px auto 50px auto;
-    color: #aaa; }
+    color: #888; }
   section img {
     height: 15px; }
   section #squareR {
@@ -104,7 +115,7 @@ section {
         color: #f9f9f9;
         background: #ff9600; }
         .white .start .box:nth-child(2) input:hover {
-          border: 1px solid #dedede;
+          border: 1px solid #888;
           background: #f9f9f9;
           color: #383838; }
       .white .start .box img {
@@ -117,7 +128,7 @@ section {
         width: 400px; }
       .white .start .box input {
         margin-top: 20px;
-        border: 1px solid #dedede;
+        border: 1px solid #888;
         border-radius: 5px;
         padding: 8px 15px;
         background: #f9f9f9;
@@ -167,7 +178,7 @@ section {
       opacity: .8;
       width: 20%;
       height: 200px;
-      border: .5px solid white;
+      border: .5px solid #fff;
       color: #f9f9f9;
       -webkit-transition: .3s;
       -o-transition: .3s;
@@ -188,21 +199,22 @@ section {
     -ms-flex-align: center;
     align-items: center; }
     .white .team .person img {
-      height: 200px;
+      height: 225px;
       display: block;
       border-top-right-radius: 5px;
       border-top-left-radius: 5px; }
     .white .team .person .container {
-      border: 1px solid #B3B4B4;
+      border: 1px solid #888;
+      border-top: none;
       padding-top: 15px;
       padding-bottom: 35px;
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px; }
       .white .team .person .container .profession {
-        color: #B3B4B4; }
+        color: #888; }
         .white .team .person .container .profession .info {
           text-decoration: none;
-          color: #B3B4B4;
+          color: #888;
           margin: auto 11px; }
     .white .team .person .name {
       margin-top: -11px; }
@@ -216,10 +228,10 @@ section {
       width: 40%;
       border: 0;
       height: 0;
-      border-top: 1px solid #b3b4b4; }
+      border-top: 1px solid #888; }
     .white .team .person .info a {
       text-decoration: none;
-      color: #B3B4B4; }
+      color: #888; }
     .white .team .v img {
       height: 125px; }
   .white .offer {
@@ -254,12 +266,15 @@ section {
         -o-transition: .3s;
         transition: .3s; }
         .white .offer .box input:hover {
-          border: 1px solid #dedede;
+          border: 1px solid #888;
           background: #f9f9f9;
           color: #383838; }
-    .white .offer .line {
-      border-bottom: 2px solid black;
-      margin-top: 35px; }
+      .white .offer .box hr {
+        width: 80%;
+        border: 0;
+        height: 0;
+        margin: 35px auto;
+        border-top: 1px solid #888; }
 
 .grey {
   background: #383838;
@@ -302,7 +317,7 @@ section {
           .grey .features0 .featuresLeft .featuresContent .featuresText h4 {
             text-transform: uppercase; }
           .grey .features0 .featuresLeft .featuresContent .featuresText p {
-            color: #b4b4b4; }
+            color: #888; }
     .grey .features0 .featuresRight img {
       height: 275px; }
   .grey .achivements {
@@ -313,20 +328,26 @@ section {
     justify-content: space-around; }
     .grey .achivements .box {
       display: block; }
-      .grey .achivements .box .line {
-        margin-top: 10px;
-        border-bottom: 2px solid black; }
+      .grey .achivements .box hr {
+        width: 40%;
+        border: 0;
+        height: 0;
+        border-top: 1px solid #888; }
       .grey .achivements .box span {
-        font-size: 25px; }
+        font-size: 45px;
+        font-style: italic; }
       .grey .achivements .box p {
+        color: #888;
+        font-size: 14px;
+        font-weight: 600;
         text-transform: uppercase; }
 
 .orange {
   background: #ff9600;
   color: #f9f9f9; }
   .orange #break1 {
-    background: black;
-    color: black; }
+    background: bls;
+    color: black !important; }
   .orange .wtf {
     display: block;
     margin: auto;
@@ -338,10 +359,71 @@ section {
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 5px; }
-  .orange .opinion {
-    display: block;
-    margin: 25px auto 0 auto;
-    width: 60%; }
+  .orange .slideshow-container {
+    position: relative; }
+    .orange .slideshow-container .mySlides {
+      padding: 50px;
+      margin-top: 20px;
+      -webkit-animation: opinionSlide 1s both;
+      animation: opinionSlide 1s both; }
+    .orange .slideshow-container .prev {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #ff9600;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 5px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      left: 15%;
+      background: #f9f9f9;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+    .orange .slideshow-container .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #ff9600;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 5px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      right: 15%;
+      background: #f9f9f9;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+    .orange .slideshow-container .prev:hover, .orange .slideshow-container .next:hover {
+      background-color: #f9f9f9;
+      color: #383838; }
+  .orange .dot-container {
+    text-align: center; }
+  .orange .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #383838;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s; }
+  .orange .active, .orange .dot:hover {
+    background-color: #f9f9f9; }
 
 footer {
   background: #383838;

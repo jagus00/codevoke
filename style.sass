@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap&subset=latin-ext');
 
 $bg: #f9f9f9
-$grey: #383838
+$grey0: #383838
+$grey1: #888
 $orange: #ff9600
+
+@keyframes opinionSlide
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+            
 
 html
     scroll-behavior: smooth
@@ -20,7 +28,7 @@ header
         user-select: none
 nav
     background: $bg
-    border-bottom: 1px solid #dedede
+    border-bottom: 1px solid $grey1
     display: flex
     padding-top: 20px
     padding-bottom: 20px
@@ -39,14 +47,14 @@ nav
         margin: 0 10px
         display: inline-block
     a
-        color: $grey
+        color: $grey0
         font-size: 16px
         font-weight: 600
         text-decoration: none
         transition: .3s
         &:nth-child(2)
             color: $bg
-            background: $grey
+            background: $grey0
             border-radius: 5px
             padding-top: 5px
             padding-bottom: 5px
@@ -75,14 +83,14 @@ section
         font-weight: 400
     .description
         margin: -20px auto 50px auto
-        color: #aaa
+        color: $grey1
     img
         height: 15px
     #squareR
         transform: rotate(180deg)
 
 .white
-    color: $grey
+    color: $grey0
     .start
         display: flex
         justify-content: space-around
@@ -95,9 +103,9 @@ section
                     color: $bg
                     background: $orange
                     &:hover
-                        border: 1px solid #dedede
+                        border: 1px solid $grey1
                         background: $bg
-                        color: $grey
+                        color: $grey0
             img
                 height: 90px
                 margin: auto
@@ -108,7 +116,7 @@ section
                 width: 400px
             input
                 margin-top: 20px
-                border: 1px solid #dedede
+                border: 1px solid $grey1
                 border-radius: 5px
                 padding: 8px 15px
                 background: $bg
@@ -148,12 +156,12 @@ section
             opacity: .8
             width: 20%
             height: 200px 
-            border: .5px solid white
+            border: .5px solid #fff
             color: $bg
             transition: .3s
             &:hover
                 opacity: 1.5
-                color: $grey
+                color: $grey0
             p
                 display: block
                 margin: auto
@@ -163,21 +171,22 @@ section
         align-items: center
         .person
             img
-                height: 200px
+                height: 225px
                 display: block
                 border-top-right-radius: 5px
                 border-top-left-radius: 5px
             .container 
-                border: 1px solid #B3B4B4
+                border: 1px solid $grey1
+                border-top: none
                 padding-top: 15px
                 padding-bottom: 35px
                 border-bottom-right-radius: 5px
                 border-bottom-left-radius: 5px
                 .profession
-                    color: #B3B4B4
+                    color: $grey1
                     .info
                         text-decoration: none
-                        color: #B3B4B4
+                        color: $grey1
                         margin: auto 11px
                     
                     
@@ -186,7 +195,7 @@ section
                 span
                     text-transform: uppercase
                     color: $bg
-                    background: $grey
+                    background: $grey0
                     padding: 8px 10px
                     border-radius: 5px
                 
@@ -194,11 +203,11 @@ section
                 width: 40%
                 border: 0;
                 height: 0;
-                border-top: 1px solid #b3b4b4
+                border-top: 1px solid $grey1
             .info
                 a
                     text-decoration: none
-                    color: #B3B4B4
+                    color: $grey1
         .v
             img
                 height: 125px
@@ -211,12 +220,12 @@ section
                 span
                     background: $orange
                 input
-                    background: $grey
-                    border: 1px solid $grey
+                    background: $grey0
+                    border: 1px solid $grey0
                     
             span 
                 color: $bg
-                background: $grey
+                background: $grey0
                 padding: 8px 13px
                 border-radius: 5px
                 text-transform: uppercase
@@ -231,15 +240,18 @@ section
                 text-transform: uppercase
                 transition: .3s
                 &:hover
-                    border: 1px solid #dedede
+                    border: 1px solid $grey1
                     background: $bg
-                    color: $grey
+                    color: $grey0
                 
-        .line
-            border-bottom: 2px solid black
-            margin-top: 35px
+            hr
+                width: 80%
+                border: 0;
+                height: 0;
+                margin: 35px auto
+                border-top: 1px solid $grey1
 .grey
-    background: $grey
+    background: $grey0
     color: $bg
     #break0
         img
@@ -271,47 +283,104 @@ section
                     h4
                         text-transform: uppercase
                     p
-                        color: #b4b4b4
+                        color: $grey1
         .featuresRight
             img
-                height: 275px;
+                height: 275px
     .achivements
         display: flex
         justify-content: space-around
         .box
             display: block
-            .line
-                margin-top: 10px
-                border-bottom: 2px solid black
+            hr
+                width: 40%
+                border: 0;
+                height: 0;
+                margin: 
+                border-top: 1px solid $grey1
             span
-                font-size: 25px
+                font-size: 45px
+                font-style: italic
             p
+                color: $grey1
+                font-size: 14px
+                font-weight: 600
                 text-transform: uppercase
+                
             
+                
 .orange
     background: $orange
     color: $bg
     #break1
-        background: black
-        color: black
+        background: bls
+        color: black !important
     .wtf
         display: block
         margin: auto
         background: $bg
-        color: $grey
+        color: $grey0
         width: 150px
         padding: 8px 15px
         text-align: center
         text-transform: uppercase
         font-weight: 600
         border-radius: 5px
-    .opinion
-        display: block
-        margin: 25px auto 0 auto
-        width: 60%
-
+        
+    .slideshow-container
+        position: relative
+        .mySlides
+            padding: 50px
+            margin-top: 20px
+            animation: opinionSlide 1s both
+        .prev
+            cursor: pointer
+            position: absolute
+            top: 50%
+            width: auto
+            margin-top: -30px
+            padding: 16px
+            color: $orange
+            font-weight: bold
+            font-size: 20px
+            border-radius: 5px
+            user-select: none
+            left: 15%
+            background: $bg
+            transition: .3s
+        .next
+            cursor: pointer
+            position: absolute
+            top: 50%
+            width: auto
+            margin-top: -30px
+            padding: 16px
+            color: $orange
+            font-weight: bold
+            font-size: 20px
+            border-radius: 5px
+            user-select: none
+            right: 15%
+            background: $bg
+            transition: .3s
+        .prev:hover, .next:hover
+            background-color: $bg
+            color: $grey0
+    .dot-container
+        text-align: center
+    .dot
+        cursor: pointer
+        height: 15px
+        width: 15px
+        margin: 0 2px
+        background-color: $grey0
+        border-radius: 50%
+        display: inline-block
+        transition: background-color .5s
+    .active, .dot:hover
+        background-color: $bg
 footer
-    background: $grey
+    background: $grey0
     color: $bg
     text-align: center
     padding-bottom: 15px
@@ -319,3 +388,11 @@ footer
         img
             height: 25px
             margin-top: -50px
+            
+
+            
+            
+            
+            
+            
+            
