@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,400i,700&display=swap&subset=latin-ext')
 
 $bg: #f9f9f9
 $grey0: #383838
@@ -14,8 +14,7 @@ $orange: #ff9600
 
 html
     scroll-behavior: smooth
-
-
+    
 body
     background: $bg
     margin: 0
@@ -23,6 +22,18 @@ body
     font-family: 'Muli', sans-serif;
     
 header
+    background: url("codebg.jpg")
+    background-size: cover
+    padding-top: 200px
+    padding-bottom: 200px
+    margin-top: -1px
+    h1
+        font-weight: 200
+        letter-spacing: 2px
+        text-align: center
+        text-shadow: 2.5px -3px 0px rgba(56,56,56,0.5)
+        font-size: 45px
+        text-transform: uppercase
     img
         width: 100vw  
         user-select: none
@@ -86,6 +97,7 @@ section
         color: $grey1
     img
         height: 15px
+        
     #squareR
         transform: rotate(180deg)
 
@@ -153,18 +165,21 @@ section
             background: url("1.jpg")
             background-size: contain
             background-repeat: no-repeat
-            opacity: .8
+            opacity: 1
             width: 20%
             height: 200px 
             border: .5px solid #fff
             color: $bg
-            transition: .3s
+            transition: .8s
             &:hover
-                opacity: 1.5
-                color: $grey0
+                background: $grey0
+                p
+                    color: $bg
             p
                 display: block
                 margin: auto
+                color: rgba(0, 0, 0, 0)
+                
     .team
         display: flex
         justify-content: space-around
@@ -175,6 +190,7 @@ section
                 display: block
                 border-top-right-radius: 5px
                 border-top-left-radius: 5px
+                padding: 0
             .container 
                 border: 1px solid $grey1
                 border-top: none
@@ -256,11 +272,8 @@ section
     #break0
         img
             display: block
-            margin: auto
+            margin: -67px auto auto auto
             height: 35px
-            margin-top: -67px
-    #orangeText
-        color: $orange
     #squareR img
         display: block !important
         margin-top: -50px
@@ -306,6 +319,11 @@ section
                 font-size: 14px
                 font-weight: 600
                 text-transform: uppercase
+    .logos
+        padding-bottom: 50px
+        img
+            height: 125px
+        
                 
             
                 
@@ -313,9 +331,11 @@ section
     background: $orange
     color: $bg
     #break1
-        background: bls
-        color: black !important
-    .wtf
+         img
+            position: relative
+            top: -67px
+            height: 55px
+    .opinionHero
         display: block
         margin: auto
         background: $bg
@@ -386,8 +406,9 @@ footer
     padding-bottom: 15px
     #break2
         img
-            height: 25px
-            margin-top: -50px
+            position: relative
+            top: -17px
+            height: 35px
             
 
             

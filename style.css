@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Muli:200,300,400,400i,700&display=swap&subset=latin-ext");
 @-webkit-keyframes opinionSlide {
   0% {
     opacity: 0; }
@@ -19,12 +19,25 @@ body {
   padding: 0;
   font-family: 'Muli', sans-serif; }
 
-header img {
-  width: 100vw;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+header {
+  background: url("codebg.jpg");
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -1px; }
+  header h1 {
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2.5px -3px 0px rgba(56, 56, 56, 0.5);
+    font-size: 45px;
+    text-transform: uppercase; }
+  header img {
+    width: 100vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
 
 nav {
   background: #f9f9f9;
@@ -175,20 +188,22 @@ section {
       background: url("1.jpg");
       background-size: contain;
       background-repeat: no-repeat;
-      opacity: .8;
+      opacity: 1;
       width: 20%;
       height: 200px;
       border: .5px solid #fff;
       color: #f9f9f9;
-      -webkit-transition: .3s;
-      -o-transition: .3s;
-      transition: .3s; }
+      -webkit-transition: .8s;
+      -o-transition: .8s;
+      transition: .8s; }
       .white .projects .box:hover {
-        opacity: 1.5;
-        color: #383838; }
+        background: #383838; }
+        .white .projects .box:hover p {
+          color: #f9f9f9; }
       .white .projects .box p {
         display: block;
-        margin: auto; }
+        margin: auto;
+        color: rgba(0, 0, 0, 0); }
   .white .team {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -202,7 +217,8 @@ section {
       height: 225px;
       display: block;
       border-top-right-radius: 5px;
-      border-top-left-radius: 5px; }
+      border-top-left-radius: 5px;
+      padding: 0; }
     .white .team .person .container {
       border: 1px solid #888;
       border-top: none;
@@ -281,11 +297,8 @@ section {
   color: #f9f9f9; }
   .grey #break0 img {
     display: block;
-    margin: auto;
-    height: 35px;
-    margin-top: -67px; }
-  .grey #orangeText {
-    color: #ff9600; }
+    margin: -67px auto auto auto;
+    height: 35px; }
   .grey #squareR img {
     display: block !important;
     margin-top: -50px; }
@@ -341,14 +354,19 @@ section {
         font-size: 14px;
         font-weight: 600;
         text-transform: uppercase; }
+  .grey .logos {
+    padding-bottom: 50px; }
+    .grey .logos img {
+      height: 125px; }
 
 .orange {
   background: #ff9600;
   color: #f9f9f9; }
-  .orange #break1 {
-    background: bls;
-    color: black !important; }
-  .orange .wtf {
+  .orange #break1 img {
+    position: relative;
+    top: -67px;
+    height: 55px; }
+  .orange .opinionHero {
     display: block;
     margin: auto;
     background: #f9f9f9;
@@ -431,5 +449,6 @@ footer {
   text-align: center;
   padding-bottom: 15px; }
   footer #break2 img {
-    height: 25px;
-    margin-top: -50px; }
+    position: relative;
+    top: -17px;
+    height: 35px; }
