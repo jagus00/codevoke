@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+body
+{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 26px;
+    background: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+p
+{
+    margin-top: 45vh;
+    vertical-align: center;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+#jagusweb
+{
+    color: white;
+    transition: .3s
+}
+
+#jagusweb:hover
+{
+    color: #383838
+}
+
+@media (max-width: 1200px) 
+{
+    body
+    {
+        font-size: 45px;
+    }
+}
